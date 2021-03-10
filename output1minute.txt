@@ -1,0 +1,23 @@
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Argument 1 passed to App\Http\Controllers\ProductController::getCronProduct() must be an instance of Illuminate\Http\Request, array given, called in /Volumes/DATA/WORK/OUTSOURCE/Laravel_Mongo/ecoms/app/Console/Commands/Queue1Minute.php on line 60
+
+  at /Volumes/DATA/WORK/OUTSOURCE/Laravel_Mongo/ecoms/app/Http/Controllers/ProductController.php:268
+    264|      *
+    265|      * @param  \Illuminate\Http\Request  $request
+    266|      * @return \Illuminate\Http\Response
+    267|      */
+  > 268|     public function getCronProduct(Request $request)
+    269|     {
+    270| 
+    271| 
+    272|         $validator = Validator::make(
+
+  Exception trace:
+
+  1   App\Http\Controllers\ProductController::getCronProduct(["sendo"])
+      /Volumes/DATA/WORK/OUTSOURCE/Laravel_Mongo/ecoms/app/Console/Commands/Queue1Minute.php:60
+
+  2   App\Console\Commands\Queue1Minute::handle()
+      /Volumes/DATA/WORK/OUTSOURCE/Laravel_Mongo/ecoms/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
